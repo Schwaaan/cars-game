@@ -18,7 +18,12 @@ export default function FormCar(){
       }
 
       let response = await api.post("/items", body);
-        console.log(response)
+      
+      if(response.status == 200){
+        alert("Registrado com sucesso")
+      }  else {
+        alert("Houve algum problema no seu registro,  favor entrar em contato com o suporte")
+      }
   }
 
     return (
